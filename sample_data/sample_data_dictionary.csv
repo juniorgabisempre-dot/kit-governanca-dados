@@ -1,0 +1,13 @@
+tabela,coluna,tipo,descricao,pii,owner,fonte,frequencia_atualizacao
+produtos,id_produto,INTEGER,Identificador unico do produto no catalogo,Nao,Time de Catalogo,Sistema de Catalogo,Diaria
+produtos,nome_produto,VARCHAR,Nome comercial do produto exibido na loja,Nao,Time de Catalogo,Sistema de Catalogo,Diaria
+produtos,categoria,VARCHAR,Categoria de classificacao do produto (ex.: eletronicos casa moda),Nao,Time de Catalogo,Sistema de Catalogo,Semanal
+produtos,preco_unitario,DECIMAL,Preco de venda unitario vigente do produto,Nao,Time Comercial,Sistema de Precificacao,Diaria
+clientes,id_cliente,INTEGER,Identificador unico do cliente cadastrado,Nao,Time de CRM,Sistema de CRM,Diaria
+clientes,nome_cliente,VARCHAR,Nome completo do cliente cadastrado,Sim,Time de CRM,Sistema de CRM,Diaria
+clientes,email_cliente,VARCHAR,,Sim,,Sistema de CRM,Diaria
+pedidos,id_pedido,INTEGER,Identificador unico do pedido realizado,Nao,Time de Operacoes,Sistema de Vendas,Near real-time
+pedidos,id_cliente_fk,INTEGER,Chave estrangeira para o cliente que realizou o pedido,Nao,Time de Operacoes,Sistema de Vendas,Near real-time
+pedidos,data_pedido,DATE,Data em que o pedido foi realizado,Nao,Time de Operacoes,Sistema de Vendas,Near real-time
+pedidos,valor_total,DECIMAL,Valor total do pedido incluindo frete,Nao,Time Financeiro,Sistema de Vendas,Near real-time
+pedidos,status_pedido,VARCHAR,,Nao,,Sistema de Vendas,Near real-time
